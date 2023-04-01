@@ -2,11 +2,8 @@ import { renderSucculentList } from "./renderSucculentList";
 
 const renderSucculentApp = async () => {
     const layoutApp = `
-        <div class="filter"> 
-        <button id="add-succulent">Add New Succulent</button>
-        </div>
         <div id="succulent-list"></div>
-    <div id="succulent-popup-form">
+        <div id="succulent-popup-form">
       <form>
         <input type="hidden" id="save-succulent-type" />
         <input type="hidden" id="input-succulent-id" />

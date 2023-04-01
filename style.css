@@ -16,11 +16,12 @@
 
 a {
   font-weight: 500;
-  color: green;
   text-decoration: inherit;
+  text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+  color: #146c94;
 }
 a:hover {
-  color: green;
+  color: #146c94;
 }
 
 body {
@@ -62,4 +63,109 @@ h2 {
   top: 0;
   left: 0;
   display: none;
+}
+
+.body-signin {
+  background-color: #242424;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+.container {
+  width: 30vw;
+  height: 75vh;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.email,
+.password,
+.sign-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 12px;
+  gap: 12px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: black;
+}
+
+p {
+  color: black;
+  text-align: center;
+}
+
+input {
+  width: 225px;
+  height: 24px;
+  border-radius: 10px;
+  text-align: center;
+  border: none;
+  position: relative;
+  color: black;
+}
+
+input:hover,
+.submit:hover {
+  cursor: pointer;
+  border: 2px solid;
+}
+
+.email,
+.password {
+  width: 75%;
+  height: 50%;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  margin-bottom: 50px;
+  margin-left: 46px;
+  text-align: center;
+  margin-bottom: 27px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+form.formInput {
+  padding-top: 24px;
+}
+
+.un:focus,
+.password:focus {
+  border: black;
+}
+
+.container-submit {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-signin {
+  cursor: pointer;
+  border-radius: 12px;
+  color: #fff;
+  background: black;
+  border: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  display: flex;
+  padding: 10px;
+  margin-top: 10px;
+  width: 50%;
+  height: 30%;
+  justify-content: center;
 }
