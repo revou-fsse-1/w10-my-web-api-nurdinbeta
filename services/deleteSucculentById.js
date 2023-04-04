@@ -2,10 +2,10 @@ import axios from "axios";
 import { API_URL } from "../lib/constant";
 
 export const deleteSucculentById = async (id) => {
-  try {
-    const response = await axios.delete(
-      `${API_URL}/succulent/${id}`
+  try { 
+    const response = await axios.delete(`${API_URL}/succulent/${id}`
     );
+    console.log(response);
 
     return response.data;
   } catch (err) {

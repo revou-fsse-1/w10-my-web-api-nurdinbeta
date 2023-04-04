@@ -10,10 +10,6 @@
 
 ## Run
 
-- http://localhost:5173/
-
-or
-
 - Open CLI and clone git
 - Make sure you already install Vite
 - `npm run dev` to Run

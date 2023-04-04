@@ -8,6 +8,8 @@ export const updateSucculentById = async (succulentData) => {
       genus: succulentData.genus,
       family: succulentData.family,
     });
+
+    console.log({updateSucculentById})
   } catch (err) {
     console.log(err);
   }

@@ -1,7 +1,9 @@
 import { renderSucculentList } from "./renderSucculentList";
+import { applyPopupFormFunctionality } from "./handlePopupForm";
 
 const renderSucculentApp = async () => {
     const layoutApp = `
+        <button id="add-succulent">Add New Succulent</button>
         <div id="succulent-list"></div>
         <div id="succulent-popup-form">
       <form>
@@ -9,7 +11,7 @@ const renderSucculentApp = async () => {
         <input type="hidden" id="input-succulent-id" />
         <label>
           <span>Succulent Name</span>
-          <input id="input-succulant-name" type="text">
+          <input id="input-succulent-name" type="text">
         </label>
         <br/>
         <label>
@@ -35,7 +37,10 @@ succulentContainer.innerHTML = layoutApp;
 
 // load
 renderSucculentList("");
-}
+
+
+applyPopupFormFunctionality();
+};
 
 addEventListener("DOMContentLoaded", () => {
     renderSucculentApp();

@@ -1,4 +1,4 @@
-import { createSucculent } from "../services/createSucculent";
+import { addSucculent } from "../services/addSucculent";
 import { updateSucculentById } from "../services/updateSucculentById";
 import { renderSucculentList } from "../app/renderSucculentList";
 
@@ -9,7 +9,7 @@ export const applyPopupFormFunctionality = () => {
   openPopupButton.addEventListener("click", () => {
     const popup = document.querySelector("#succulent-popup-form");
 
-    document.querySelector("#save-succulent-type").value = "create";
+    document.querySelector("#save-succulent-type").value = "add";
 
     const nameInput = document.querySelector("#input-succulent-name");
     const genusInput = document.querySelector("#input-succulent-genus");
@@ -31,19 +31,20 @@ export const applyPopupFormFunctionality = () => {
   
   const saveSucculentButton = document.querySelector("#save-succulent-button");
 
-  saveSucculentButton.addEventListener("click", async (e) => {
-    e.preventDefault(); // to prevent form to reload somewhere
-
+  saveSucculentButton.addEventListener("click", async (e) => { 
+    e.preventDefault(); // to prevent form to reload somewheres
+  
     const id = document.querySelector("#input-succulent-id").value;
     const name = document.querySelector("#input-succulent-name").value;
     const genus = document.querySelector("#input-succulent-genus").value;
-    const family = document.querySelector("#input-community-family").value;
+    const family = document.querySelector("#input-succulent-family").value;
 
-    const saveType = document.querySelector("#save-succulent-type").value;
+    const saveType = document.querySelector("#save-succulent-type");
 
-    if (saveType === "create") {
-      await createSucculent({ name, genus, family });
+    if (saveType === "add") {
+      await addSucculent({ name, genus, family });
     }
+
 
     if (saveType === "update") {
       await updateSucculentById({ name, genus, family, id });
